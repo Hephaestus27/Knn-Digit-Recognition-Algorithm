@@ -98,3 +98,10 @@ def lets_knn(X_train, y_train, X_test, y_test, n_neighbors=3, weights='uniform',
 lets_knn(X_train, y_train, X_test, y_test, 7, 'uniform', print_wrong_pred=True) # i chose 7 neighbors instead of 3 or 5 just to be sure of the result
 
 # NOTE : there is  540 test samples here, and only few of them are wrong!
+
+
+#Logistic Regression:
+y_pred = predict(LogisticRegression(penalty='l2', multi_class='multinomial', solver='lbfgs'),
+                 X_train, y_train, X_test)
+show_confusion_table(y_test, y_pred, labels=range(10), cmap=plt.cm.Reds)
+
