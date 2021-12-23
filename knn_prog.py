@@ -1,10 +1,13 @@
 from sklearn import datasets, neighbors
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
 import numpy as np
 from random import randint
 import time
+
+from knn_program import predict, show_confusion_table
 
 X, y = datasets.load_digits(return_X_y=True)
 
